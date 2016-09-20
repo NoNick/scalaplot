@@ -115,7 +115,7 @@ class GnuplotPlotter(chart: Chart) extends Plotter(chart) {
   def plotChart(chart: Chart, defaultTerminal: String = "dumb") {
     lines += "# Chart settings"
     chart.title.foreach(t => lines += "set title \"%s\"" format (t))
-    chart.pointSize.foreach(t => lines += "set pointSize %f" format (t))
+    chart.pointSize.foreach(t => lines += "set pointsize %f" format (t))
     // legend
     if (chart.showLegend) {
       lines += "set key %s %s" format(chart.legendPosX.toString.toLowerCase, chart.legendPosY.toString.toLowerCase)
